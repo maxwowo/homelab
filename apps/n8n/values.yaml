@@ -6,6 +6,10 @@ secretRefs:
 
 database:
   type: sqlite
+  useExternal: false
+
+redis:
+  enabled: false
 
 persistence:
   enabled: true
