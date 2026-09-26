@@ -1,6 +1,9 @@
 queueMode:
   enabled: false
 
+secretRefs:
+  existingSecret: "n8n-secrets"
+
 database:
   type: sqlite
 
