@@ -13,10 +13,13 @@ ingress:
   enabled: true
   className: "tailscale"
   hosts:
-    - host: ""
+    - host: "n8n.hound-avior.ts.net"
       paths:
         - path: /
           pathType: Prefix
+  tls:
+    - hosts:
+        - "n8n.hound-avior.ts.net"
 
 webhook:
   url: "https://n8n.hound-avior.ts.net"
