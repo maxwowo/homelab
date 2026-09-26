@@ -1,0 +1,22 @@
+queueMode:
+  enabled: false
+
+database:
+  type: sqlite
+
+persistence:
+  enabled: true
+  storageClass: "local-path"
+  size: 5Gi
+
+ingress:
+  enabled: true
+  className: "tailscale"
+  hosts:
+    - host: ""
+      paths:
+        - path: /
+          pathType: Prefix
+
+webhook:
+  url: "https://n8n.hound-avior.ts.net"
