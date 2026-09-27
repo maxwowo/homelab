@@ -2,6 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["default:automergeAll"],
   "argocd": {
-    "fileMatch": ["^apps/.+\\.ya?ml$", "^bootstrap/.+\\.ya?ml$"]
+    "fileMatch": ["^apps/.+\\.ya?ml$", "^argocd/.+\\.ya?ml$"]
   }
 }
