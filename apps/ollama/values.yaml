@@ -1,0 +1,17 @@
+ollama:
+  models:
+    pull:
+      - "llama3.2:3b"
+
+persistentVolume:
+  enabled: true
+  storageClass: "local-path"
+  size: 30Gi
+
+resources:
+  requests:
+    cpu: "2"
+    memory: "6Gi"
+  limits:
+    cpu: "3"
+    memory: "16Gi"
