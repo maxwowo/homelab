@@ -4,7 +4,7 @@ persistence:
     size: 5Gi
   media:
     storageClass: "local-path"
-    size: 25Gi
+    size: 100Gi
 
 ingress:
   enabled: true
