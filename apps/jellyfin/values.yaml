@@ -1,0 +1,16 @@
+persistence:
+  config:
+    storageClass: "local-path"
+    size: 5Gi
+  media:
+    storageClass: "local-path"
+    size: 25Gi
+
+ingress:
+  enabled: true
+  className: "tailscale"
+  hosts:
+    - host: "jellyfin.hound-avior.ts.net"
+      paths:
+        - path: /
+          pathType: Prefix
