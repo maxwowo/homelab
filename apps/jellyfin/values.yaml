@@ -14,3 +14,6 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
+  tls:
+    - hosts:
+        - "jellyfin.hound-avior.ts.net"
