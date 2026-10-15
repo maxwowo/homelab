@@ -10,7 +10,7 @@ spec:
   sources:
     - repoURL: ghcr.io/n8n-io/n8n-helm-chart
       chart: n8n
-      targetRevision: 1.15.0
+      targetRevision: 1.16.0
       helm:
         valueFiles:
           - $values/apps/n8n/values.yaml
