@@ -6,7 +6,7 @@ image:
 minecraftServer:
   eula: "TRUE"
   type: "PAPER"
-  version: "LATEST"
+  version: "26.3"
   difficulty: normal
   gameMode: survival
   onlineMode: default
