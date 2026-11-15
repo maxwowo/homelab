@@ -1,3 +1,7 @@
+# Scaled to zero: not in use, frees 2 CPU / 6Gi requests for the Minecraft server.
+# Set back to 1 to re-enable.
+replicaCount: 0
+
 ollama:
   models:
     pull:

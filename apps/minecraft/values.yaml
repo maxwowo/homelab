@@ -1,0 +1,65 @@
+image:
+  repository: itzg/minecraft-server
+  tag: java25
+  pullPolicy: IfNotPresent
+
+minecraftServer:
+  eula: "TRUE"
+  type: "PAPER"
+  version: "LATEST"
+  difficulty: normal
+  gameMode: survival
+  onlineMode: default
+  enforceSecureProfile: default
+  whitelist: "SevenThirty,Dandalf_TheDank"
+  ops: "SevenThirty"
+  maxPlayers: 10
+  motd: "maxwowo's vanilla server"
+  spawnProtection: 0
+  viewDistance: 10
+  memory: "4G"
+  serviceType: "LoadBalancer"
+  servicePort: 25565
+  rcon:
+    enabled: true
+    withGeneratedPassword: false
+    existingSecret: "minecraft-rcon"
+    secretKey: "rcon-password"
+    serviceType: "ClusterIP"
+
+extraEnv:
+  ENFORCE_WHITELIST: "true"
+  USE_AIKAR_FLAGS: "true"
+
+persistence:
+  storageClass: "local-path"
+  dataDir:
+    enabled: true
+    Size: 20Gi
+
+resources:
+  requests:
+    cpu: "2"
+    memory: "5Gi"
+  limits:
+    cpu: "4"
+    memory: "7Gi"
+
+startupProbe:
+  enabled: true
+  failureThreshold: 60
+  periodSeconds: 10
+
+terminationGracePeriodSeconds: 180
+
+mcbackup:
+  enabled: true
+  backupMethod: tar
+  backupInterval: 6h
+  pruneBackupsDays: 7
+  backupOnTerminate: true
+  persistence:
+    storageClass: "local-path"
+    backupDir:
+      enabled: true
+      Size: 30Gi
