@@ -5,7 +5,7 @@ image:
 
 minecraftServer:
   eula: "TRUE"
-  type: "PAPER"
+  type: "FABRIC"
   version: "26.3"
   difficulty: normal
   gameMode: survival
@@ -17,6 +17,17 @@ minecraftServer:
   motd: "I come now"
   spawnProtection: 0
   viewDistance: 10
+  # Server-side performance mods; `?` skips a mod if no compatible release exists.
+  modrinth:
+    projects:
+      - "fabric-api"
+      - "lithium?"
+      - "ferrite-core?"
+      - "krypton?"
+      - "alternate-current?"
+      - "clumps?"
+    downloadDependencies: required
+    allowedVersionType: release
   memory: "4G"
   serviceType: "LoadBalancer"
   servicePort: 25565
