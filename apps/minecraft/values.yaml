@@ -11,7 +11,7 @@ minecraftServer:
   gameMode: survival
   onlineMode: default
   enforceSecureProfile: default
-  whitelist: "SevenThirty,Dandalf_TheDank"
+  whitelist: "SevenThirty,Dandalf_TheDank,___SW___"
   ops: "SevenThirty"
   maxPlayers: 10
   motd: "I come now"
